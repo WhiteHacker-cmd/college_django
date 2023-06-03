@@ -1,0 +1,31 @@
+{% extends "components/lobby/base_lobby.html" %}
+{% load render_bundle from webpack_loader %}
+
+{% block page_javascript %}
+
+{% render_bundle 'lobby' %}
+
+{% endblock %}
+
+{% block main_content %}
+<div class="container">
+    <div class="row">
+        <h3>Let's play Quiz, <span class="text-primary">{{request.user.username}}</span>!</h3>
+        <hr>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <div class="alert alert-success">
+                <a class="close" href="#" data-dismiss="alert">×</a>
+
+                {{ message }}
+
+            </div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <hr>
+        <div id="lobby_component"></div>
+    </div>
+</div>
+{% endblock %}

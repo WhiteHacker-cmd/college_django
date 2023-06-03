@@ -1,0 +1,70 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* this is for first div */
+#main-layer{
+  background-image: url('/static/img/Layer1.png');
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height:100%;
+  width: 100%;
+}
+
+#second-layer{
+  background-color: #99ebff;
+  height: 100%;
+}
+
+#third-layer{
+  background-color: #ccff33;
+  height: 100%;
+}
+
+#forth-layer{
+  background-color: #99ebff;
+  height: 100%;
+}
+
+.main{
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.comp{
+  font-size: 20;
+  font-weight: bolder;
+}
+
+.tug{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  /* position: sticky; */
+}
+
+.cloud{
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  left: 10px;
+}
+
+/* .tug-padding{
+  padding-right: 15px;
+} */
+
+/* this is for copyright */
+.cr{
+  text-align: center;
+}
+
+.edited{
+  text-align: center;
+  color: red;
+}
+

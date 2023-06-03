@@ -1,0 +1,62 @@
+{% extends "components/game/base_game.html" %}
+{% load render_bundle from webpack_loader %}
+
+{% block page_javascript %}
+{% render_bundle 'game' %}
+{% endblock %}
+
+{% block main_content %}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Play Quiz! Now!</h3>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-header">
+                        <h3>Playing {{ game.game_hash }}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row ">
+                            <div class="col-sm-2 col-sm-offset-3">
+                                <div>
+                                    <div>
+                                        <h4>{{game.creator}}</h4>
+                                    </div>
+                                    <!-- <span><img src="/static/img/blue-player.png"></span> -->
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <h2 style="height:20px;line-height:20px;">VS</h2>
+                            </div>
+                            <div class="col-sm-2">
+                                <div>
+                                    <div>
+                                        <h4>{{game.opponent}}</h4>
+                                    </div>
+                                    <!-- <span><img src="/static/img/red-player.png"></span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="container">
+                    <div class="panel-body" data-game={{game.game_hash}} id="game_component">
+                        <!-- game is rendered here -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

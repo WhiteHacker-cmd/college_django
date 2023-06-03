@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+Lib/
+Scripts/
+webpack-stats.json
+db.*
+**/__pycache__/
+.vscode/

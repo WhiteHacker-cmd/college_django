@@ -1,0 +1,14 @@
+{% extends "winner/base.html" %} 
+ 
+{% block main_content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+    	{% if winner is "DRAW!!!" %}
+    	<h3>winner is {{winner}}</h3>
+    	{% else %}
+        <h3>winner is {{winner}}!!!</h3>
+        {% endif %}
+        <hr>
+    </div>
+</div>
+{% endblock %}

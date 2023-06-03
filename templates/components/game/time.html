@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  display: inline;
+  font-size: 40px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+    <p id="days"></p>
+    <h2 id="end"></h2>
+ 
+    <script>
+    // The data/time we want to countdown to
+    var countDownDate = 10;
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    
+    // Calculating the days, hours, minutes and seconds left
+        
+    // Result is output to the specific element
+    document.getElementById("days").innerHTML = countDownDate
+    countDownDate = countDownDate - 1
+
+        
+    // Display the message when countdown is over
+    if (countDownDate < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = ""
+        document.getElementById("end").innerHTML = "TIME UP!!";
+    }
+    }, 1000);
+    </script>
+</body>
+</html>
